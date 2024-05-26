@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ isEditMode ? 'Update Property' : 'Add Property' }}</title>
+  <link rel="stylesheet" href="property-form.component.css">
+</head>
+<body>
+  <div class="property-form-container">
+    <h2>{{ isEditMode ? 'Update Property' : 'Add Property' }}</h2>
+    <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="place">Place</label>
+        <input id="place" type="text" formControlName="place">
+      </div>
+      <div class="form-group">
+        <label for="area">Area</label>
+        <input id="area" type="text" formControlName="area">
+      </div>
+      <div class="form-group">
+        <label for="numBedrooms">Number of Bedrooms</label>
+        <input id="numBedrooms" type="number" formControlName="numBedrooms">
+      </div>
+      <div class="form-group">
+        <label for="numBathrooms">Number of Bathrooms</label>
+        <input id="numBathrooms" type="number" formControlName="numBathrooms">
+      </div>
+      <div class="form-group">
+        <label for="hospitalsNearby">Hospitals Nearby</label>
+        <textarea id="hospitalsNearby" formControlName="hospitalsNearby"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="collegesNearby">Colleges Nearby</label>
+        <textarea id="collegesNearby" formControlName="collegesNearby"></textarea>
+      </div>
+      <button type="submit" [disabled]="propertyForm.invalid">{{ isEditMode ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+</body>
+</html>

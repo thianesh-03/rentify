@@ -1,0 +1,11 @@
+<div class="seller-dashboard">
+  <h2>Seller Dashboard</h2>
+  <button class="add-property-btn" [routerLink]="['/seller/property/add']">Add Property</button>
+  <ul class="property-list">
+    <li class="property-item" *ngFor="let property of properties">
+      {{ property.place }} - {{ property.area }} - {{ property.numBedrooms }} Bedrooms - {{ property.numBathrooms }} Bathrooms
+      <button (click)="deleteProperty(property.id)">Delete</button>
+      <button [routerLink]="['/seller/property/update', property.id]">Update</button>
+    </li>
+  </ul>
+</div>

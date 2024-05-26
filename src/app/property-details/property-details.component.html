@@ -1,0 +1,9 @@
+<div class="property-details" *ngIf="property">
+    <h2>{{ property.place }}</h2>
+    <p>Area: {{ property.area }}</p>
+    <p>Number of Bedrooms: {{ property.numBedrooms }}</p>
+    <p>Number of Bathrooms: {{ property.numBathrooms }}</p>
+    <p>Hospitals Nearby: {{ property.hospitalsNearby.join(', ') }}</p>
+    <p>Colleges Nearby: {{ property.collegesNearby.join(', ') }}</p>
+    <button (click)="onInterested()">I'm Interested</button>
+  </div>

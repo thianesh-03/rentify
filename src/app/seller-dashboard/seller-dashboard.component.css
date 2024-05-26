@@ -1,0 +1,50 @@
+/* Style for the Seller Dashboard */
+.seller-dashboard {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the Add Property Button */
+.add-property-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-property-btn:hover {
+  background-color: #45a049;
+}
+
+/* Style for the Property List */
+.property-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each Property Item */
+.property-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.property-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.property-item button:hover {
+  background-color: #d32f2f;
+}
